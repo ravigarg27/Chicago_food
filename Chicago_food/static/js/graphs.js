@@ -1,8 +1,4 @@
-queue()
-    .defer(d3.json, "/data")
-    .await(makeGraphs);
-
-function makeGraphs(error, recordsJson) {
+d3.json('data.json', function makeGraphs(error, recordsJson) {
 	
 	//Clean data
 	//Risk, Zip, Facility type, Latitude, Logitude, Neighborhood
@@ -133,4 +129,4 @@ function makeGraphs(error, recordsJson) {
 
 	
 
-};
+});
